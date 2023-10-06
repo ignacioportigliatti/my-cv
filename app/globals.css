@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+.navBarIcon {
+  @apply w-6 h-6 opacity-50 hover:opacity-100 hover:text-lime-500 transition duration-200 ease-in-out
+}
+
+.navBarItem {
+  @apply opacity-70 hover:opacity-100 hover:text-lime-500 transition duration-200
+}
+
+@layer base {
+  .font-outline-2 {
+    -webkit-text-stroke: 1px white;
+    &:hover {
+      -webkit-text-stroke: 1px rgb(132 204 22);
+    }
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px white;
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,4 +44,40 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+
+.bg {
+	background: linear-gradient(0deg, #000121, #0000, #000121);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  height: 100%;
+	min-height: 100vh;
+}
+
+.accordionItem {
+	background: linear-gradient(45deg, #000121, #0000, #000121);
+	background-size: 800% 800%;
+	animation: gradient 10s ease infinite;
+
+}
+
+.titles {
+	background: linear-gradient(0deg, white, rgb(132 204 22) ,white);
+	background-size: 800% 800%;
+	animation: gradient 10s ease infinite;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 100% 0%;
+	}
+	50% {
+		background-position: 50% 50%;
+	}
+	100% {
+		background-position: 100% 0%;
+	}
 }
