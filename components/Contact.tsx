@@ -93,6 +93,7 @@ const Contact = (props: Props) => {
           />
           {errors.name && <span className="text-xs text-red-500">This field is required</span>}
           <Input
+            type="email"
             variant="bordered"
             classNames={{
               inputWrapper:

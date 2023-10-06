@@ -49,10 +49,10 @@ export const Navbar = (props: Props) => {
             <PopoverContent className="p-2 pr-6 bg-transparent border-white/30 border backdrop-blur-xl">
               <div className="flex flex-col gap-2">
           {navItems.map((item, index) => (
-            <Link href={item.link} key={index}>
-              <a className={`navBarItem`}>
+            <Link href={item.link} key={index} className="navBarItem">
+             
                 {item.name}{pathname === item.link ? <span className="animate-fade-up">.</span> : <span className="opacity-0">.</span>}
-              </a>
+       
             </Link>
           ))}
         </div>
@@ -79,7 +79,7 @@ export const Navbar = (props: Props) => {
         </div>
         <div className="hidden md:flex justify-center gap-2 transition duration-1000 border border-transparent hover:border-lime-500 py-1 px-2 rounded-lg">
           {navItems.map((item, index) => (
-            <Link href={item.link} className="navBarItem" key={index}>
+            <Link href={item.link} className={`navBarItem ${pathname === item.link ? 'text-lime-500 opacity-100' : ''}`} key={index}>
               {item.name}{pathname === item.link ? <span className="animate-fade-up">.</span> : <span className="opacity-0">.</span>}
             </Link>
           ))}

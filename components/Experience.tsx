@@ -111,7 +111,7 @@ const Experience = (props: Props) => {
       company: "Maxter Producciones",
       companyLogoSrc: "/img/maxter-logo.png",
       date: "May 2014 - July 2019",
-      description: `"I've also served as a Graphic Designer and Video Editor at Maxter Producciones, a company specializing in video and photo productions, with a primary focus on Student Tourism in my hometown of Villa Carlos Paz, Argentina. My role involved crafting visually engaging content to cater to a diverse clientele."`,
+      description: `I've also served as a Graphic Designer and Video Editor at Maxter Producciones, a company specializing in video and photo productions, with a primary focus on Student Tourism in my hometown of Villa Carlos Paz, Argentina. My role involved crafting visually engaging content to cater to a diverse clientele.`,
       techStack: [
         { icon: SiAdobeaftereffects, label: "After Effects" },
         { icon: SiAdobeillustrator, label: "Illustrator" },
