@@ -129,7 +129,7 @@ const Experience = (props: Props) => {
   ];
 
   return (
-    <NextUIProvider className="rounded-lg border border-transparent hover:border-white/10 duration-300 animate-fade flex md:flex-row flex-col gap-6 md:gap-4 h-full justify-start items-center md:max-w-[900px]  sm:p-9 w-full">
+    <div className="rounded-lg border border-transparent hover:border-white/10 duration-300 animate-fade flex md:flex-row flex-col gap-6 md:gap-4 h-full justify-start items-center md:max-w-[900px]  sm:p-9 w-full">
       <h1
         className="pointer-events-none hidden md:flex titles items-start text-xl md:text-2xl text-lime-5000 "
         style={{ textOrientation: "upright", writingMode: "sideways-lr" }}
@@ -189,7 +189,7 @@ const Experience = (props: Props) => {
           ))}
         </Accordion>
       </div>
-    </NextUIProvider>
+    </div>
   );
 };
 

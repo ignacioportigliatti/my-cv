@@ -66,7 +66,7 @@ const Projects = (props: Props) => {
             key={`index-${index}`}
             className="animate-flip-down flex flex-col text-start p-3 h-auto justify-between opacity-50 duration-300 gap-2 hover:opacity-100 max-w-max rounded-lg border border-lime-500"
           >
-            <NextUIProvider className="relative">
+            <div className="relative">
               <Image
                 radius="md"
                 alt={project.name}
@@ -84,7 +84,7 @@ const Projects = (props: Props) => {
                   </div>
                 ))}
               </div>
-            </NextUIProvider>
+            </div>
             <div className="w-full flex-auto flex h-1/4 flex-col gap-1 ">
               <h1 className="leading-none">{project.name}</h1>
               <p className="text-xs">{project.description}</p>

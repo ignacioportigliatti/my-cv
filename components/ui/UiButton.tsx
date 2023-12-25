@@ -13,6 +13,7 @@ interface UiButtonProps {
   type?: "button" | "submit" | "reset" | undefined;
   size?: "xs" | "md" | "xl" | undefined;
   className?: string;
+  disabled?: boolean;
 }
 
 const MyButton = extendVariants(Button, {
@@ -46,10 +47,10 @@ const MyButton = extendVariants(Button, {
 });
 
 const UiButton = (props: UiButtonProps) => {
-  const { label, color, variant, startContent, endContent, size, type, className } = props;
+  const { label, color, variant, startContent, endContent, size, type, className, disabled } = props;
 
   return (
-    <NextUIProvider>
+    <div>
 
       <div className="flex gap-4 items-center">
         <MyButton
@@ -60,12 +61,13 @@ const UiButton = (props: UiButtonProps) => {
           size={size ? size : undefined}
           startContent={startContent ? startContent : undefined}
           endContent={endContent ? endContent : undefined}
+          disabled={disabled}
         >
           {label}
         </MyButton>
       </div>
 
-    </NextUIProvider>
+    </div>
   );
 };
 

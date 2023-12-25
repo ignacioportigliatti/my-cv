@@ -1,11 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import UiButton from "./ui/UiButton";
 import { AiOutlineMail, AiOutlineSend } from "react-icons/ai";
 import { Input, NextUIProvider, Textarea } from "@nextui-org/react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
+import emailjs from "@emailjs/browser"
+import { toast } from "react-toastify";
 
 interface Props {}
 
@@ -22,11 +24,40 @@ const Contact = (props: Props) => {
     watch,
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+
+  const [loading, setLoading] = useState(false);
+  useEffect(() => emailjs.init("4CuovlSTF497J51L5"), []);
+
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    const serviceId = "my-cv-contact";
+    const templateId = "contact-template";
+    try {
+      setLoading(true);
+      await emailjs.send(serviceId, templateId, data);
+      toast(
+        "Email sent successfully, I will be contacting you as soon as possible. Thanks for your interest.", {
+          type: "success",
+          theme: "dark",
+          position: "bottom-right",
+          bodyClassName: "text-xs"
+        }
+      )
+    } catch (error) {
+      toast(
+        "Error sending email, try again later or send a message to ign.portigliatti@gmail.com", {
+          type: "error",
+          theme: "dark",
+          position: "bottom-right",
+        }
+      )
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-    <NextUIProvider className="animate-fade flex flex-col md:flex-row w-full sm:max-w-[900px] backdrop-blur-xl md:py-12 p-9  hover:border-white/10 duration-500 max-w-[360px] items-center justify-center gap-4 md:gap-7 rounded-lg border border-stone-800/10">
+    <div className="animate-fade flex flex-col md:flex-row w-full sm:max-w-[900px] backdrop-blur-xl md:py-12 p-9  hover:border-white/10 duration-500 max-w-[360px] items-center justify-center gap-4 md:gap-7 rounded-lg border border-stone-800/10">
       <h1
         className="pointer-events-none hidden md:flex titles items-start text-xl md:text-2xl text-lime-5000 "
         style={{ textOrientation: "upright", writingMode: "sideways-lr" }}
@@ -121,10 +152,11 @@ const Contact = (props: Props) => {
             color="lime"
             variant="bordered"
             endContent={<AiOutlineSend className="md:w-5 md:-5" />}
+            disabled={loading}
           />
         </form>
       </div>
-    </NextUIProvider>
+    </div>
   );
 };
 
