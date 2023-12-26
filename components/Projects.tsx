@@ -32,12 +32,12 @@ const Projects = (props: Props) => {
         { icon: SiAmazonaws, label: "Amazon AWS" },
       ],
       github: "",
-      link: "",
+      link: "https://descargas.maxterproducciones.com.ar/client?code=ARAGROUP-0180-1410",
       image: "/img/projects/maxter-descargas.jpg",
     },
     {
       name: "More to come...",
-      description: "This is my personal website",
+      description: "Work in progress (:",
       techStack: techStackIconArray,
       github: "",
       link: "",
@@ -62,7 +62,9 @@ const Projects = (props: Props) => {
 
       <div className="grid grid-cols-1 max-w-max gap-4 md:grid-cols-3 p-2">
         {projects.map((project, index) => (
-          <div
+          <a
+            href={project.link}
+            target="_blank"
             key={`index-${index}`}
             className="animate-flip-down flex flex-col text-start p-3 h-auto justify-between opacity-50 duration-300 gap-2 hover:opacity-100 max-w-max rounded-lg border border-lime-500"
           >
@@ -89,7 +91,7 @@ const Projects = (props: Props) => {
               <h1 className="leading-none">{project.name}</h1>
               <p className="text-xs">{project.description}</p>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>
