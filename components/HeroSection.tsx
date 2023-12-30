@@ -1,13 +1,8 @@
 import Link from "next/link";
-import React from "react";
 import { PiHandWavingLight } from "react-icons/pi";
 import {
-  AiFillFileZip,
-  AiFillQuestionCircle,
-  AiOutlineFileText,
-  AiOutlineFileZip,
-  AiOutlineOrderedList,
-  AiOutlineQuestion,
+  AiFillQuestionCircle, AiOutlineFileZip,
+  AiOutlineOrderedList
 } from "react-icons/ai";
 import UiButton from "./ui/UiButton";
 
@@ -27,7 +22,7 @@ const HeroSection = (props: Props) => {
           >
             Ignacio Portigliatti
           </Link>
-          , a Junior Software Developer from{" "}
+          , a Fullstack Developer from{" "}
           <span className="bg-clip-text bg-white hover:bg-gradient-to-b hover:text-transparent hover:from-sky-500 hover:via-yellow-200 hover:via-60% hover:from-40% hover:to-80% duration-300 transition-colors hover:to-sky-500">
             Argentina
           </span>

@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  Button,
   Popover,
   PopoverContent,
   PopoverTrigger,
@@ -12,7 +11,6 @@ import React from "react";
 import {
   AiOutlineLinkedin,
   AiOutlineGithub,
-  AiOutlineInstagram,
   AiOutlineMenu,
   AiOutlineMail,
 } from "react-icons/ai";
@@ -65,7 +63,7 @@ export const Navbar = (props: Props) => {
               <User
                 as="button"
                 name="Ignacio Portigliatti"
-                description="Junior Software Developer"
+                description="Fullstack Developer"
                 className="transition-transform"
                 avatarProps={{
                   className: 'hidden',

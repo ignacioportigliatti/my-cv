@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import UiButton from "./ui/UiButton";
 import { AiOutlineMail, AiOutlineSend } from "react-icons/ai";
-import { Input, NextUIProvider, Textarea } from "@nextui-org/react";
+import { Input, Textarea } from "@nextui-org/react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import emailjs from "@emailjs/browser"
 import { toast } from "react-toastify";
