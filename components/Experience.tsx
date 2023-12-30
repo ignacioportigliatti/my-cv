@@ -24,6 +24,7 @@ import {
 } from "react-icons/si";
 import Link from "next/link";
 import { AiOutlineContacts, AiOutlineMail } from "react-icons/ai";
+import { ExperienceJob } from "@/lib/interfaces";
 
 interface Props {}
 
@@ -41,7 +42,7 @@ const Experience = (props: Props) => {
     content: "text-small px-2",
   };
 
-  const jobs = [
+  const jobs: ExperienceJob[] = [
     {
       title: "Looking for a new experience",
       company: "XXXX",
@@ -82,7 +83,25 @@ const Experience = (props: Props) => {
       company: "Maxter Descargas",
       companyLogoSrc: "/img/maxter-logo.png",
       date: "June 2023 - September 2023",
-      description: `I've dedicated the past two years to honing my skills in both Frontend and Backend development, and I'm proud to showcase my latest project: a comprehensive private streaming platform for videos and photos. If you'd like to learn more about my work, I'd be happy to discuss it with you.`,
+      description: `I've dedicated the past two years to honing my skills in both Frontend and Backend development, so I was contacted by an enterprise to make this project as a job and also as my dissertation: a comprehensive private streaming platform for videos and photos. If you'd like to learn more about the work and the tech used, I'd be happy to discuss it with you.`,
+      indicator: ({ isOpen }: AccordionItemIndicatorProps) =>
+        isOpen ? (
+          <a
+            className="p-1  rotate-90 text-xs opacity-50 hover:opacity-100 duration-300 hover:bg-lime-500/50 hover:border-lime-500 hover:text-white border rounded-md flex items-center gap-1"
+            href="https://descargas.maxterproducciones.com.ar/client?code=ARAGROUP-0180-1410"
+            target="_blank"
+          >
+            go to project
+          </a>
+        ) : (
+          <a
+            className="p-1 text-xs opacity-50 hover:opacity-100 duration-300 hover:bg-lime-500/50 hover:border-lime-500 hover:text-white border rounded-md flex items-center  gap-1"
+            href="https://descargas.maxterproducciones.com.ar/client?code=ARAGROUP-0180-1410"
+            target="_blank"
+          >
+            go to project
+          </a>
+        ),
       techStack: [
         { icon: SiNextdotjs, label: "Next.js" },
         { icon: SiReact, label: "React" },
@@ -121,12 +140,6 @@ const Experience = (props: Props) => {
     },
   ];
 
-  const techStack = [
-    { icon: SiAdobeaftereffects, label: "After Effects" },
-    { icon: SiAdobeillustrator, label: "Illustrator" },
-    { icon: SiAdobephotoshop, label: "Photoshop" },
-    { icon: SiAdobepremierepro, label: "Premiere Pro" },
-  ];
 
   return (
     <div className="rounded-lg border border-transparent hover:border-white/10 duration-300 animate-fade flex md:flex-row flex-col gap-6 md:gap-4 h-full justify-start items-center md:max-w-[900px]  sm:p-9 w-full">
@@ -152,7 +165,7 @@ const Experience = (props: Props) => {
             <AccordionItem
               key={`index-${index}`}
               aria-label={job.title}
-              indicator={job.indicator ? job.indicator : null}
+              indicator={job.indicator ? job.indicator : undefined}
               startContent={
                 <img
                   alt={`${job.company}`}
