@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  Button,
   Popover,
   PopoverContent,
   PopoverTrigger,
@@ -12,7 +11,6 @@ import React from "react";
 import {
   AiOutlineLinkedin,
   AiOutlineGithub,
-  AiOutlineInstagram,
   AiOutlineMenu,
   AiOutlineMail,
 } from "react-icons/ai";

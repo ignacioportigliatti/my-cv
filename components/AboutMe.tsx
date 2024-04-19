@@ -1,9 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import {
-  AiOutlineFileText,
   AiOutlineFileZip,
-  AiOutlineMail,
 } from "react-icons/ai";
 
 import UiButton from "./ui/UiButton";
@@ -49,7 +47,7 @@ const AboutMe = (props: Props) => {
               Ignacio Portigliatti
             </h2>
             <h6 className="text-xs flex-none  w-max px-2 p-1 text-lime-950 bg-lime-500 rounded-lg">
-              Fullstack Software Developer
+              Fullstack Developer
             </h6>
           </div>
 

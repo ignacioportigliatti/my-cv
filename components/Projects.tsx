@@ -1,9 +1,7 @@
 'use client'
 
-import { Image, NextUIProvider } from "@nextui-org/react";
-import Link from "next/link";
+import { Image } from "@nextui-org/react";
 import React from "react";
-import { AiOutlineFileText, AiOutlineMail } from "react-icons/ai";
 import {
   SiAmazonaws,
   SiJavascript,
@@ -19,6 +17,7 @@ import { techStackIconArray } from "./ui/techStackIconArray";
 interface Props {}
 
 const Projects = (props: Props) => {
+  
   const projects = [
     {
       name: "Maxter Descargas",
@@ -60,7 +59,7 @@ const Projects = (props: Props) => {
   ];
 
   return (
-    <div className="rounded-lg border border-transparent hover:border-white/10 duration-300 animate-fade flex md:flex-row flex-col gap-6 md:gap-4 h-full justify-start items-center md:max-w-[900px]  sm:p-9 w-full">
+    <div className="rounded-lg border border-transparent hover:border-white/10 duration-300 animate-fade flex md:flex-row flex-col gap-4 h-full justify-start items-center md:max-w-[900px] pt-4 sm:p-9 w-full">
       <h1
         className="pointer-events-none hidden md:flex titles items-start text-xl md:text-2xl text-lime-5000 "
         style={{ textOrientation: "upright", writingMode: "sideways-lr" }}
