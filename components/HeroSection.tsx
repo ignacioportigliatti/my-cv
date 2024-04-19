@@ -27,7 +27,7 @@ const HeroSection = (props: Props) => {
           >
             Ignacio Portigliatti
           </Link>
-          , a Junior Software Developer from{" "}
+          , a Fullstack Software Developer from{" "}
           <span className="bg-clip-text bg-white hover:bg-gradient-to-b hover:text-transparent hover:from-sky-500 hover:via-yellow-200 hover:via-60% hover:from-40% hover:to-80% duration-300 transition-colors hover:to-sky-500">
             Argentina
           </span>

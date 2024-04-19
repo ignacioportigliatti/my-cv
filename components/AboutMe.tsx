@@ -49,7 +49,7 @@ const AboutMe = (props: Props) => {
               Ignacio Portigliatti
             </h2>
             <h6 className="text-xs flex-none  w-max px-2 p-1 text-lime-950 bg-lime-500 rounded-lg">
-              Junior Software Developer
+              Fullstack Software Developer
             </h6>
           </div>
 
@@ -65,7 +65,7 @@ const AboutMe = (props: Props) => {
               <b> ethers.js</b> among others.
             </p>
             <p>
-              As a driven Junior Developer my goal is to be open to new
+              As a driven Fullstack Developer my goal is to be open to new
               opportunities and challenges that will allow me to constantly
               learn and grow as a professional.
             </p>

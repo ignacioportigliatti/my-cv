@@ -65,7 +65,7 @@ export const Navbar = (props: Props) => {
               <User
                 as="button"
                 name="Ignacio Portigliatti"
-                description="Junior Software Developer"
+                description="Fullstack Software Developer"
                 className="transition-transform"
                 avatarProps={{
                   className: 'hidden',

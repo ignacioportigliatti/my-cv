@@ -12,6 +12,7 @@ import {
   SiReact,
   SiRedux,
   SiTailwindcss,
+  SiTypescript,
 } from "react-icons/si";
 import { techStackIconArray } from "./ui/techStackIconArray";
 
@@ -23,7 +24,7 @@ const Projects = (props: Props) => {
       name: "Maxter Descargas",
       description: "Private streaming platform for videos and photos.",
       techStack: [
-        { icon: SiJavascript, label: "Javascript" },
+        { icon: SiTypescript, label: "Typescript" },
         { icon: SiNextdotjs, label: "Next.js" },
         { icon: SiReact, label: "React" },
         { icon: SiTailwindcss, label: "Tailwind CSS" },
@@ -34,6 +35,19 @@ const Projects = (props: Props) => {
       github: "",
       link: "https://descargas.maxterproducciones.com.ar/client?code=ARAGROUP-0180-1410",
       image: "/img/projects/maxter-descargas.jpg",
+    },
+    {
+      name: "Radetich DJ Presskit",
+      description: "Deejay presskit for Radetich, argentinian DJ & Producer.",
+      techStack: [
+        { icon: SiTypescript, label: "Typescript" },
+        { icon: SiNextdotjs, label: "Next.js" },
+        { icon: SiReact, label: "React" },
+        { icon: SiTailwindcss, label: "Tailwind CSS" },
+      ],
+      github: "",
+      link: "https://radetich-presskit.vercel.app",
+      image: "/img/projects/radetich.jpg",
     },
     {
       name: "More to come...",
